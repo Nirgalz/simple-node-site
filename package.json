@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "stylus source/stylesheets/index.styl -o static/css",
     "watch-css": "stylus source/stylesheets/index.styl -o static/css -w",
-    "clean": "rm -rf static\\css && mkdir -p static\\css",
-    "build": "npm run clean && npm run build-css",
-    "watch": "npm run clean && npm run watch-css & nodemon server -e js,jade",
+
+    "build": "npm run build-css",
+    "watch": "npm run watch-css & nodemon server -e js,pug",
     "start": "node server"
   },
   "repository": {
@@ -30,7 +30,6 @@
   "homepage": "https://github.com/Nirgalz/simple-node-site#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "jade": "^1.11.0",
     "morgan": "^1.7.0",
     "nodemon": "^1.10.2",
     "pug": "^2.0.0-beta6",
