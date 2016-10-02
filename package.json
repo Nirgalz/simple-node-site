@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "stylus source/stylesheets/index.styl -o static/css",
     "watch-css": "stylus source/stylesheets/index.styl -o static/css -w",
-
-    "build": "npm run build-css",
-    "watch": "npm run watch-css & nodemon server -e js,pug",
+    "clean": "rm -r static\\css && mkdir static\\css",
+    "build": "npm run clean && npm run build-css",
+    "watch": "npm run clean && npm run watch-css & nodemon server -e js,pug",
     "start": "node server"
   },
   "repository": {
